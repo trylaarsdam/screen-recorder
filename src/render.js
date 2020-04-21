@@ -9,7 +9,9 @@ const { dekstopCapturer } = require('electron');
 
 //Get the available video sources
 async function getVideoSources() {
-
-
+    const inputSources = await dekstopCapturer.getSources({
+        types: ['window', 'screen']
+    });
+    
 
 }
